@@ -162,7 +162,7 @@ std::vector<uid_t> getClusterAdmin(std::string clustername)
 {
     std::vector<uid_t> adminuids;
 
-    std::string clustercmd = "lsclusters -l " + clustername; 
+    std::string clustercmd = "lsclusters -l " + clustername;
     FILE * fp = popen(clustercmd.c_str(), "r");
     if (fp != NULL) {
         char buffer[4096];
